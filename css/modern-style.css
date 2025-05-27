@@ -450,6 +450,15 @@ nav {
     color: white;
 }
 
+.engine-tag i {
+    color: var(--primary-color);
+    font-size: 1rem;
+}
+
+.engine-tag:hover i {
+    color: white;
+}
+
 .card-icon::before {
     content: '';
     position: absolute;
@@ -558,6 +567,45 @@ footer .container {
 .social-links a:hover {
     background-color: var(--primary-color);
     transform: translateY(-3px);
+}
+
+/* Skill Tags */
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.skill-tag {
+    display: inline-flex;
+    align-items: center;
+    background-color: rgba(74, 107, 255, 0.1);
+    color: var(--primary-color);
+    padding: 6px 12px;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all var(--transition-speed) ease;
+}
+
+.skill-tag:hover {
+    background-color: rgba(74, 107, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+.skill-tag i {
+    margin-right: 6px;
+    font-size: 1rem;
+    color: var(--primary-color);
+}
+
+.custom-icon {
+    width: 18px;
+    height: 18px;
+    margin-right: 6px;
+    vertical-align: -3px;
+    filter: brightness(0) saturate(100%) invert(40%) sepia(57%) saturate(2623%) hue-rotate(217deg) brightness(101%) contrast(101%);
 }
 
 /* Animations */
