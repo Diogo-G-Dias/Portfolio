@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diogo Dias - Curriculum Vitae</title>
+    <meta name="description" content="Professional CV of Diogo Dias, Game Designer and Project Manager with 5+ years of remote experience.">
+    <link rel="stylesheet" href="css/modern-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .cv-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .cv-header {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .cv-photo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        
+        .cv-name {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            color: var(--dark-color);
+        }
+        
+        .cv-title {
+            font-size: 1.2rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+        
+        .cv-contact {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        
+        .cv-contact-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .cv-section {
+            margin-bottom: 2rem;
+        }
+        
+        .cv-section-title {
+            font-size: 1.5rem;
+            color: var(--dark-color);
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--primary-color);
+        }
+        
+        .cv-item {
+            margin-bottom: 1.5rem;
+        }
+        
+        .cv-item-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+        }
+        
+        .cv-item-title {
+            font-weight: 600;
+            font-size: 1.1rem;
+            color: var(--dark-color);
+        }
+        
+        .cv-item-subtitle {
+            font-style: italic;
+            color: var(--text-color);
+        }
+        
+        .cv-item-date {
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+        
+        .cv-item-description {
+            margin-top: 0.5rem;
+        }
+        
+        .cv-skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+        }
+        
+        .cv-skill {
+            background-color: var(--light-color);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+        
+        .cv-actions {
+            display: flex;
+            justify-content: center;
+            margin-top: 3rem;
+            gap: 1rem;
+        }
+        
+        @media print {
+            body {
+                background-color: white;
+            }
+            
+            .cv-container {
+                box-shadow: none;
+                padding: 0;
+            }
+            
+            .cv-actions {
+                display: none;
+            }
+        }
+        
+        @media screen and (max-width: 768px) {
+            .cv-header {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .cv-contact {
+                justify-content: center;
+            }
+            
+            .cv-item-header {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <h1><a href="index.html">Diogo Dias</a></h1>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="mobile-games.html"><i class="fas fa-mobile-alt"></i> Mobile Games</a></li>
+                    <li><a href="html5-games.html"><i class="fab fa-html5"></i> HTML5 Games</a></li>
+                    <li><a href="game-design.html"><i class="fas fa-gamepad"></i> Game Design</a></li>
+                </ul>
+                <div class="burger">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header animate-on-scroll" style="padding: 2rem 0 1rem;">
+            <div class="container">
+                <h1 style="font-size: 2.2rem; margin-bottom: 0.5rem;">Curriculum Vitae</h1>
+                <p>My professional experience, and skills</p>
+            </div>
+        </section>
+
+        <section class="cv-section animate-on-scroll" style="padding-top: 1rem;">
+            <div class="container">
+                <div class="cv-container">
+                    <div class="cv-header">
+                        <img src="images/ProfilePic.jpg" alt="Diogo Dias" class="cv-photo">
+                        <div>
+                            <h1 class="cv-name">Diogo Dias</h1>
+                            <h2 class="cv-title">Game Designer & Project Manager</h2>
+                            <div class="cv-contact">
+                                <div class="cv-contact-item">
+                                    <i class="fas fa-envelope"></i>
+                                    <a href="mailto:diogogdias@hotmail.com">diogogdias@hotmail.com</a>
+                                </div>
+                                <div class="cv-contact-item">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span>Portugal (Remote)</span>
+                                </div>
+                                <div class="cv-contact-item">
+                                    <i class="fab fa-linkedin"></i>
+                                    <a href="https://www.linkedin.com/in/diogodias1/" target="_blank">LinkedIn</a>
+                                </div>
+                                <div class="cv-contact-item">
+                                    <i class="fas fa-globe"></i>
+                                    <a href="https://diogogdias.com" target="_blank">diogogdias.com</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cv-section">
+                        <h2 class="cv-section-title">Professional Summary</h2>
+                        <p>Creative and versatile Game Designer and Project Manager with over 5 years of remote experience in the gaming industry. Proficient in Unity, Construct, and Unreal Engine, with strong skills in C#, JavaScript, and visual scripting. Adept at leading cross-functional teams, developing engaging game mechanics, and managing projects from concept to completion. Fluent in Portuguese, English, and Spanish.</p>
+                    </div>
+
+                    <div class="cv-section">
+                        <h2 class="cv-section-title">Work Experience</h2>
+                        
+                        <div class="cv-item">
+                            <div class="cv-item-header">
+                                <div>
+                                    <h3 class="cv-item-title">🎮 Studio Director</h3>
+                                    <div class="cv-item-subtitle">Kool Games | Remote</div>
+                                </div>
+                                <div class="cv-item-date">2021 - Present</div>
+                            </div>
+                            <div class="cv-item-description">
+                                <ul>
+                                    <li>Directed the development and publishing of multiple mobile and web-based game titles, overseeing all phases from concept through release.</li>
+                                    <li>Led a remote, multidisciplinary team of designers, developers, and artists, implementing Agile workflows to improve delivery and productivity.</li>
+                                    <li>Spearheaded game design on key titles, including economy balancing, level progression, and core mechanics.</li>
+                                    <li>Managed external communications with clients and partners, and contributed to pitching projects to publishers.</li>
+                                    <li>Provided mentorship to junior team members and improved team performance through structured feedback and planning.</li>
+                                    <li>Maintained full operational oversight of the studio for 4+ years, including project planning, hiring, budgeting, and creative direction.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="cv-item">
+                            <div class="cv-item-header">
+                                <div>
+                                    <h3 class="cv-item-title">🎮 Freelance Game Designer & Developer</h3>
+                                    <div class="cv-item-subtitle">Self-Employed | Remote</div>
+                                </div>
+                                <div class="cv-item-date">2020 - 2021</div>
+                            </div>
+                            <div class="cv-item-description">
+                                <ul>
+                                    <li>Designed and developed indie game prototypes with a focus on mobile platforms.</li>
+                                    <li>Led the creation of a mobile game using Unreal Engine, incorporating blueprint visual scripting and optimizing for performance.</li>
+                                    <li>Collaborated with artists and sound designers to deliver a cohesive and engaging game experience.</li>
+                                    <li>Managed timelines and milestones independently, ensuring project progress and documentation.</li>
+                                    <li>Explored monetization strategies and user retention models for mobile games.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="cv-section">
+                        <h2 class="cv-section-title">🎮 Game Design Skills</h2>
+                        
+                        <div class="cv-item">
+                            <h3 class="cv-item-title">Economy & Progression Design</h3>
+                            <p>Experienced in designing game economies, balancing in-game currencies, and structuring long-term player progression systems.</p>
+                        </div>
+                        
+                        <div class="cv-item">
+                            <h3 class="cv-item-title">Live Ops & Monetization Design</h3>
+                            <p>Knowledgeable about free-to-play monetization strategies and player retention mechanisms.</p>
+                        </div>
+                        
+                        <div class="cv-item">
+                            <h3 class="cv-item-title">System & Feature Design</h3>
+                            <p>Ability to design modular systems that scale across content and gameplay features.</p>
+                        </div>
+                        
+                        <div class="cv-item">
+                            <h3 class="cv-item-title">Prototyping</h3>
+                            <p>Fast prototyping using Construct and Unity, often with stock assets to validate concepts quickly.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="cv-section">
+                        <h2 class="cv-section-title">📊 Production & Project Skills</h2>
+                        
+                        <div class="cv-item">
+                            <h3 class="cv-item-title">Team Leadership</h3>
+                            <p>4+ years leading a game studio, including creative direction, scheduling, and team coordination.</p>
+                        </div>
+                        
+                        <div class="cv-item">
+                            <h3 class="cv-item-title">Roadmapping & Milestone Planning</h3>
+                            <p>Comfortable with building production pipelines and breaking down work into sprints and deliverables.</p>
+                        </div>
+                        
+                        <div class="cv-item">
+                            <h3 class="cv-item-title">Remote Team Management</h3>
+                            <p>Proven ability to lead fully remote teams across multiple disciplines.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="cv-section">
+                        <h2 class="cv-section-title">🧠 Soft & Strategic Skills</h2>
+                        
+                        <div class="cv-item">
+                            <h3 class="cv-item-title">Creative Problem-Solving</h3>
+                            <p>Strong lateral thinking skills, especially during concept development and early prototyping.</p>
+                        </div>
+                        
+                        <div class="cv-item">
+                            <h3 class="cv-item-title">Pitch & Communication</h3>
+                            <p>Experience creating pitch decks, presenting game ideas clearly, and adapting communication for different stakeholders.</p>
+                        </div>
+                        
+                        <div class="cv-item">
+                            <h3 class="cv-item-title">Market & Player Understanding</h3>
+                            <p>Insight into hypercasual and mobile game trends, including what appeals to publishers and users.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="cv-section">
+                        <h2 class="cv-section-title">💻 Technical Proficiency</h2>
+                        
+                        <div class="cv-item">
+                            <h3 class="cv-item-title">Game Development</h3>
+                            <p>Unity, Construct 3, Unreal Engine, C#, JavaScript, visual scripting.</p>
+                        </div>
+                        
+                        <div class="cv-item">
+                            <h3 class="cv-item-title">Project Management Tools</h3>
+                            <p>Trello, ClickUp (project tracking)</p>
+                        </div>
+                        
+                        <div class="cv-item">
+                            <h3 class="cv-item-title">Design Tools</h3>
+                            <p>Figma, Miro (for wireframing, brainstorming, UX planning)</p>
+                        </div>
+                    </div>
+                    
+                    <div class="cv-section">
+                        <h2 class="cv-section-title">🌐 Languages</h2>
+                        
+                        <div class="cv-skills">
+                            <div class="cv-skill">Portuguese (Native)</div>
+                            <div class="cv-skill">English (Fluent)</div>
+                            <div class="cv-skill">Spanish (Fluent)</div>
+                        </div>
+                    </div>
+                    
+
+
+                    <div class="cv-actions">
+                        <a href="#" onclick="saveAsPDF(); return false;" class="btn" style="background-color: #e74c3c;">
+                            <i class="fas fa-file-pdf"></i> Save as PDF
+                        </a>
+                        <a href="index.html" class="btn">
+                            <i class="fas fa-arrow-left"></i> Back to Portfolio
+                        </a>
+                    </div>
+                    
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Diogo Dias. All rights reserved.</p>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/diogodias1/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:contact@diogodias.com" target="_blank" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                <!-- Add more social links as needed -->
+            </div>
+        </div>
+    </footer>
+
+    <!-- Additional styles for CV page -->
+    <style>
+        .portfolio-button-container {
+            text-align: center;
+            margin-top: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .portfolio-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            background: var(--gradient-primary);
+            color: white;
+            font-size: 1.2rem;
+            font-weight: 600;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .portfolio-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+        
+        .portfolio-button i {
+            font-size: 1.3rem;
+        }
+        
+        /* Enhanced contact items */
+        .cv-contact-item a {
+            transition: color 0.3s ease;
+            font-weight: 500;
+        }
+        
+        .cv-contact-item a:hover {
+            color: var(--primary-color);
+            text-decoration: underline;
+        }
+        
+        .cv-contact-item i {
+            color: var(--primary-color);
+            width: 20px;
+            text-align: center;
+            margin-right: 5px;
+        }
+        
+        @media print {
+            body * {
+                visibility: visible;
+            }
+            
+            .cv-container {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                padding: 15px;
+            }
+            
+            header, footer, .cv-actions, .page-header, .portfolio-button-container {
+                display: none !important;
+            }
+        }
+    </style>
+    
+    <script>
+        // Function to save as PDF using the print dialog
+        function saveAsPDF() {
+            // Set the document title to suggest filename
+            const originalTitle = document.title;
+            document.title = "CV Diogo Dias";
+            
+            // Try to set PDF as default (works in Chrome)
+            if (navigator.userAgent.indexOf('Chrome') !== -1) {
+                // In Chrome, we can try to set the destination to PDF
+                const printSettings = {
+                    destination: 'Save as PDF',
+                    shouldPrintBackgrounds: true,
+                    margins: { top: 0, bottom: 0, left: 0, right: 0 }
+                };
+                
+                try {
+                    // This is a Chrome-specific API
+                    if (window.print) {
+                        window.print(printSettings);
+                    } else {
+                        window.print();
+                    }
+                } catch (e) {
+                    // Fallback to standard print
+                    window.print();
+                }
+            } else {
+                // For other browsers, use standard print
+                window.print();
+            }
+            
+            // Restore original title
+            setTimeout(function() {
+                document.title = originalTitle;
+            }, 100);
+        }
+    </script>
+    
+    <script src="js/modern-script.js"></script>
+</body>
+</html>
