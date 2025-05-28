@@ -139,13 +139,29 @@ const setActiveNavLink = () => {
         }
     });
     
-    // Add active class to the current page link
+    // Map of special pages to their parent categories
+    const pageCategories = {
+        // HTML5 Games subpages
+        'limited-defense.html': 'html5-games.html',
+        'puzzle-quest.html': 'html5-games.html',
+        'space-shooter.html': 'html5-games.html',
+        // Mobile Games subpages
+        'idle-empire.html': 'mobile-games.html',
+        'match-masters.html': 'mobile-games.html',
+        'adventure-quest.html': 'mobile-games.html',
+        // Game Design subpages can be added here
+    };
+    
+    // Check if current page is a subpage and get its parent category
+    let categoryPage = pageCategories[currentPage] || currentPage;
+    
+    // Add active class to the current page link or its parent category
     navLinks.forEach(link => {
         const linkHref = link.getAttribute('href');
+        const linkPage = linkHref.split('/').pop(); // Extract just the filename
         
-        // Check if the current page matches the link href
-        // This handles both exact matches and cases where the href is part of the current path
-        if (linkHref === currentPage || currentPath.endsWith('/' + linkHref)) {
+        // Check if the current page matches the link href or if it's a subpage of a category
+        if (linkPage === currentPage || linkPage === categoryPage) {
             link.classList.add('active');
             // Also add active class to the parent li element
             if (link.parentElement) {
@@ -154,7 +170,7 @@ const setActiveNavLink = () => {
         }
     });
     
-    console.log('Current page:', currentPage);
+    console.log('Current page:', currentPage, 'Category:', categoryPage);
 }
 
 // Initialize
