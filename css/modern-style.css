@@ -1,11 +1,11 @@
 /* Modern Portfolio Styles */
 :root {
-    --primary-color: #4a6bff;
+    --primary-color: #4361ee;
     --primary-light: #7b8eff;
-    --secondary-color: #7b42ff;
-    --dark-color: #2c3e50;
-    --light-color: #f4f7f9;
-    --text-color: #333;
+    --secondary-color: #3a0ca3;
+    --dark-color: #2b2d42;
+    --light-color: #f8f9fa;
+    --text-color: #2b2d42;
     --text-light: #6c7983;
     --transition-speed: 0.3s;
     --box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
@@ -29,6 +29,9 @@ body {
     line-height: 1.6;
     color: var(--text-color);
     background-color: var(--light-color);
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
     overflow-x: hidden;
 }
 
@@ -116,13 +119,13 @@ img {
 
 /* Enhanced Header Styles */
 header {
-    background-color: rgba(255, 255, 255, 0.98);
-    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
+    background-color: var(--dark-color);
+    padding: 1rem 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
     position: sticky;
     top: 0;
-    z-index: 100;
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    z-index: 1000;
+    transition: all 0.3s ease;
 }
 
 nav {
@@ -139,12 +142,13 @@ nav {
 
 .logo h1 {
     font-size: 1.8rem;
-    color: var(--dark-color);
+    color: white;
     font-weight: 700;
-    background: var(--gradient-primary);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+}
+
+.logo h1 a {
+    color: white;
+    text-decoration: none;
 }
 
 .nav-links {
@@ -153,7 +157,7 @@ nav {
 }
 
 .nav-links a {
-    color: var(--dark-color);
+    color: white;
     font-weight: 600;
     position: relative;
     padding: 5px 0;
@@ -733,6 +737,7 @@ footer .container {
     background: var(--gradient-primary);
     color: white;
     text-align: center;
+    margin-bottom: 1rem;
 }
 
 .project-header h1 {
@@ -755,12 +760,15 @@ footer .container {
     grid-template-columns: 1.5fr 1fr;
     gap: 2.5rem;
     margin-bottom: 3rem;
+    align-items: start;
 }
 
 .project-main-image img {
     width: 100%;
     border-radius: var(--border-radius);
     box-shadow: var(--box-shadow);
+    object-fit: contain;
+    max-height: 450px;
 }
 
 .project-info {
@@ -810,16 +818,19 @@ footer .container {
 .project-description,
 .project-features,
 .project-gameplay,
-.project-contribution,
-.project-challenges {
-    margin-bottom: 4rem;
+.project-contribution {
+    margin-bottom: 1.5rem;
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 1.2rem;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
 }
 
 .project-description h2,
 .project-features h2,
 .project-gameplay h2,
-.project-contribution h2,
-.project-challenges h2 {
+.project-contribution h2 {
     font-size: 1.8rem;
     margin-bottom: 1.5rem;
     color: var(--dark-color);
@@ -830,8 +841,7 @@ footer .container {
 .project-description h2::after,
 .project-features h2::after,
 .project-gameplay h2::after,
-.project-contribution h2::after,
-.project-challenges h2::after {
+.project-contribution h2::after {
     content: '';
     position: absolute;
     bottom: 0;
@@ -919,6 +929,9 @@ footer .container {
     display: flex;
     justify-content: space-between;
     margin-top: 3rem;
+    background-color: var(--primary-color);
+    color: white;
+    transform: translateY(-2px);
 }
 
 .nav-button {
@@ -1005,6 +1018,27 @@ footer .container {
     animation: fadeIn 0.8s forwards;
 }
 
+/* Accessibility Improvements */
+:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
+.skip-to-content {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: var(--primary-color);
+    color: white;
+    padding: 8px 15px;
+    z-index: 1001;
+    transition: top 0.3s ease;
+}
+
+.skip-to-content:focus {
+    top: 0;
+}
+
 @keyframes fadeIn {
     to {
         opacity: 1;
@@ -1076,7 +1110,7 @@ footer .container {
         right: 0;
         height: 100vh;
         top: 0;
-        background-color: white;
+        background-color: var(--dark-color);
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -1086,7 +1120,7 @@ footer .container {
         transition: transform var(--transition-speed) ease-in;
         z-index: 200;
         padding: 2rem 0;
-        box-shadow: -5px 0 30px rgba(0, 0, 0, 0.1);
+        box-shadow: -5px 0 30px rgba(0, 0, 0, 0.3);
     }
     
     .nav-links li {
@@ -1167,6 +1201,22 @@ footer .container {
     
     .card-content {
         padding: 1.8rem;
+    }
+    
+    .project-info {
+        grid-template-columns: 1fr;
+    }
+    
+    .project-header h1 {
+        font-size: 2.2rem;
+    }
+    
+    .project-description h2,
+    .project-features h2,
+    .project-gameplay h2,
+    .project-contribution h2,
+    .project-challenges h2 {
+        font-size: 1.8rem;
     }
 }
 
