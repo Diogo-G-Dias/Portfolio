@@ -729,7 +729,7 @@ footer .container {
 
 /* Project Detail Page Styles */
 .project-hero {
-    padding: 6rem 0 3rem;
+    padding: 3rem 0 2rem;
     background: var(--gradient-primary);
     color: white;
     text-align: center;
@@ -1010,6 +1010,42 @@ footer .container {
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+/* Store Links Styles */
+.additional-info {
+    margin-top: 1.5rem;
+    font-size: 1.1rem;
+    color: var(--text-color);
+}
+
+.store-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.store-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    background-color: var(--dark-color);
+    color: white;
+    border-radius: var(--border-radius);
+    font-weight: 600;
+    transition: all 0.25s ease;
+}
+
+.store-link:hover {
+    background-color: var(--primary-color);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.store-link i {
+    font-size: 1.2rem;
 }
 
 /* Improved Responsive Design */
