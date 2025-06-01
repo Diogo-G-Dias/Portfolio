@@ -474,30 +474,13 @@ margin: 0 auto;
     content: none;
 }
 
-/* Play Overlay Styles */
-.play-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.3);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-.play-overlay i {
-    color: white;
-    font-size: 3rem;
-    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
-}
-
-.category-image:hover .play-overlay {
-    opacity: 1;
-}
+/* Play Overlay Styles - REMOVED
+   IMPORTANT: Do not add dark overlays or play buttons to game cards.
+   Game cards should display the game image without any overlays.
+   Users should be able to see the full game image without any darkening effects.
+   If you need to indicate that a game is playable, use text or design elements
+   in the card content section instead of overlays on the image.
+*/
 
 /* Coming Soon Overlay Styles */
 .coming-soon-overlay {
