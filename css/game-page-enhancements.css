@@ -1,0 +1,201 @@
+/* Game Page Enhancements - Professional Portfolio Layout
+   Adds subtle visual improvements while maintaining existing design */
+
+/* Section Visual Separation */
+.project-description,
+.project-features,
+.project-contribution,
+.project-challenges {
+    margin-bottom: 2.5rem;
+    padding: 2rem;
+    border-radius: 12px;
+    background-color: #ffffff;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-description:hover,
+.project-features:hover,
+.project-contribution:hover,
+.project-challenges:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Improved Heading Hierarchy */
+.project-description h2,
+.project-features h2,
+.project-contribution h2,
+.project-challenges h2 {
+    position: relative;
+    padding-bottom: 0.8rem;
+    margin-bottom: 1.5rem;
+    color: var(--dark-color);
+    font-weight: 700;
+}
+
+.project-description h2::after,
+.project-features h2::after,
+.project-contribution h2::after,
+.project-challenges h2::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 60px;
+    background: var(--gradient-primary);
+    border-radius: 3px;
+}
+
+/* Enhanced Paragraph Styling */
+.project-description p,
+.project-features p,
+.project-challenges p {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: var(--text-color);
+    margin-bottom: 1.2rem;
+}
+
+/* Highlight Stats and Metrics */
+.stat-highlight {
+    font-weight: 600;
+    color: var(--primary-color);
+    font-size: 1.1em;
+}
+
+/* Improved List Styling */
+.project-challenges ul,
+.project-contribution ul,
+.contribution-category ul {
+    padding-left: 0;
+    margin-bottom: 1.5rem;
+    list-style-type: none;
+}
+
+.project-challenges li,
+.project-contribution li,
+.contribution-category li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.8rem;
+    line-height: 1.6;
+}
+
+.project-challenges li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+    font-size: 1.2em;
+}
+
+.contribution-category li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.8rem;
+    line-height: 1.6;
+}
+
+.contribution-category li::before {
+    content: '\2022';
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+    font-size: 1.2em;
+}
+
+/* Quote Styling */
+.testimonial {
+    font-style: italic;
+    padding: 1rem 1.5rem;
+    border-left: 3px solid var(--primary-color);
+    background-color: rgba(67, 97, 238, 0.05);
+    margin: 1.5rem 0;
+    border-radius: 0 8px 8px 0;
+}
+
+/* Enhanced Contribution Grid */
+.contribution-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.contribution-category {
+    background-color: rgba(248, 249, 250, 0.8);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.contribution-category h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+}
+
+.contribution-category h3 {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Challenge/Outcome Section Styling */
+.design-challenge-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+
+.challenge-box, .outcome-box {
+    padding: 1.5rem;
+    border-radius: 8px;
+}
+
+.challenge-box {
+    background-color: rgba(67, 97, 238, 0.05);
+    border-left: 3px solid var(--primary-color);
+}
+
+.outcome-box {
+    background-color: rgba(58, 12, 163, 0.05);
+    border-left: 3px solid var(--secondary-color);
+}
+
+/* What I Learned Section */
+.learning-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+}
+
+.learning-item i {
+    color: var(--primary-color);
+    margin-right: 0.8rem;
+    font-size: 1.1rem;
+    margin-top: 0.2rem;
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 768px) {
+    .project-description,
+    .project-features,
+    .project-contribution,
+    .project-challenges {
+        padding: 1.5rem;
+    }
+    
+    .contribution-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .design-challenge-container {
+        grid-template-columns: 1fr;
+    }
+}
