@@ -181,6 +181,27 @@
     margin-top: 0.2rem;
 }
 
+/* Portfolio Cards Centering */
+.portfolio-categories-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.portfolio-categories.centered-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.portfolio-categories.centered-cards .category-card {
+    flex: 0 0 calc(50% - 1rem);
+    max-width: 400px;
+}
+
 /* Responsive Adjustments */
 @media screen and (max-width: 768px) {
     .project-description,
@@ -197,5 +218,10 @@
     
     .design-challenge-container {
         grid-template-columns: 1fr;
+    }
+    
+    .portfolio-categories.centered-cards .category-card {
+        flex: 0 0 100%;
+        max-width: 100%;
     }
 }

@@ -9,7 +9,6 @@ A clean, modern, and responsive portfolio website for showcasing game developmen
 - Separate sections for different types of game projects:
   - Mobile Games
   - HTML5 Games
-  - Game Design
 - Easy to expand with new projects
 - Professional layout with contact information and social links
 
@@ -18,7 +17,6 @@ A clean, modern, and responsive portfolio website for showcasing game developmen
 - `index.html` - Main homepage with profile information and category navigation
 - `mobile-games.html` - Showcase of mobile game projects
 - `html5-games.html` - Showcase of web-based HTML5 game projects
-- `game-design.html` - Showcase of game design work
 - `css/style.css` - All styling for the website
 - `js/script.js` - JavaScript functionality for navigation and animations
 - `images/` - Directory for image assets
