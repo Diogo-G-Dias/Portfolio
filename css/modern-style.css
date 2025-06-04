@@ -426,6 +426,12 @@ margin: 0 auto;
     gap: 1.5rem;
 }
 
+/* Center cards when there are only two cards */
+.centered-cards {
+    grid-template-columns: repeat(2, minmax(0, 400px));
+    justify-content: center;
+}
+
 .project-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -434,16 +440,16 @@ margin: 0 auto;
 }
 
 .category-card {
-    background: var(--card-bg);
-    border-radius: 12px;
+    background-color: white;
+    border-radius: var(--border-radius);
     overflow: hidden;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    height: 100%;
+    box-shadow: var(--box-shadow);
     display: flex;
     flex-direction: column;
-    text-decoration: none;
-    color: var(--text-color);
+    height: 100%;
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 1;
 }
 
 .category-card:hover {
@@ -467,6 +473,39 @@ margin: 0 auto;
 
 .category-card:hover .category-image img {
     transform: scale(1.05);
+}
+
+.card-content h3 {
+    color: #000000;
+    transition: color 0.3s ease;
+}
+
+.category-card:hover .card-content h3 {
+    color: var(--primary-color);
+}
+
+.category-card:hover .engine-tag,
+.category-card:hover .genre-tag {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.category-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: var(--gradient-primary);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s ease;
+    z-index: 2;
+}
+
+.category-card:hover::before {
+    transform: scaleX(1);
 }
 
 /* Removed gradient overlay for category images */
@@ -600,7 +639,7 @@ margin: 0 auto;
 
 .card-content p {
     margin: 0.5rem 0 0;
-    color: var(--text-secondary);
+    color: #000000;
     flex-grow: 1;
     font-size: 1rem;
     line-height: 1.5;

@@ -183,33 +183,35 @@
 
 /* Portfolio Cards Centering */
 .portfolio-categories-wrapper {
-    display: flex;
-    justify-content: center;
+    display: block !important; /* Ensure it's a block container */
+    text-align: center !important; /* Center its inline-level children */
     width: 100%;
+    padding: 0; 
 }
 
 .portfolio-categories.centered-cards {
-    display: flex !important;
-    grid-template-columns: none !important;
+    display: inline-flex !important; /* Behaves as inline for parent, flex for children */
+    grid-template-columns: none !important; 
+    grid-template-rows: none !important; 
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: center; /* Center cards within this container */
     align-items: stretch;
     gap: 2rem;
-    width: 100%;
-    max-width: 900px;
-    margin: 0 auto;
+    text-align: left; /* Reset text-align for content within cards */
+    /* No max-width or margin:auto; centered by parent's text-align */
 }
 
 .portfolio-categories.centered-cards .category-card {
-    flex: 0 0 calc(50% - 2rem);
-    max-width: 400px;
-    margin: 0;
+    flex: 0 0 400px; /* Cards are 400px wide */
 }
 
-@media screen and (max-width: 992px) {
+/* Media Query for stacking/centering single cards */
+@media screen and (max-width: 880px) { /* Breakpoint for two 400px cards + gap */
+    /* .portfolio-categories.centered-cards (as inline-flex) will be centered by wrapper's text-align. */
+    /* justify-content: center within it will center a single wrapped card. */
     .portfolio-categories.centered-cards .category-card {
-        flex: 0 0 100%;
-        max-width: 450px;
+        flex-basis: 100%;    
+        max-width: 450px;     
     }
 }
 
