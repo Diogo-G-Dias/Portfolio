@@ -58,15 +58,19 @@
                     <div class="project-info">
                         <div class="project-info-item">
                             <h3><i class="fas fa-gamepad"></i> Genre</h3>
-                            <p>Time Management, Simulation, Tycoon</p>
+                            <p>Idle Tycoon</p>
                         </div>
                         <div class="project-info-item">
                             <h3><i class="fas fa-mobile-alt"></i> Platform</h3>
                             <p>iOS, Android</p>
                         </div>
                         <div class="project-info-item">
+                            <h3><i class="fab fa-unity"></i> Engine</h3>
+                            <p>Unity</p>
+                        </div>
+                        <div class="project-info-item">
                             <h3><i class="fas fa-tools"></i> Tools</h3>
-                            <p><i class="fab fa-unity"></i> Unity, <i class="fas fa-table"></i> Excel, <i class="fas fa-chart-line"></i> Analytics</p>
+                            <p><i class="fas fa-sticky-note"></i> Miro, <i class="fas fa-chart-line"></i> GameAnalytics, <i class="fas fa-database"></i> Firebase</p>
                         </div>
                         <div class="project-info-item">
                             <h3><i class="fas fa-link"></i> Download the Game</h3>
@@ -89,7 +93,7 @@
                             </div>
                             <div class="feature-content">
                                 <h3>Park Building & Customization</h3>
-                                <p>Design and build your dream amusement park with dozens of unique rides, attractions, and amenities. Customize layouts, themes, and decorations to create a park that reflects your vision.</p>
+                                <p>Design your dream park with unique rides and attractions. Customize layouts and themes to reflect your vision.</p>
                             </div>
                         </div>
                         <div class="feature-item">
@@ -98,7 +102,7 @@
                             </div>
                             <div class="feature-content">
                                 <h3>Visitor Management</h3>
-                                <p>Manage visitor needs and expectations by providing food, restrooms, entertainment, and efficient pathways. Happy visitors spend more money and recommend your park to others.</p>
+                                <p>Provide food, restrooms and entertainment to keep visitors happy. Satisfied guests spend more and recommend your park.</p>
                             </div>
                         </div>
                         <div class="feature-item">
@@ -107,7 +111,7 @@
                             </div>
                             <div class="feature-content">
                                 <h3>Economic Simulation</h3>
-                                <p>Balance income from ticket sales and in-park purchases against maintenance costs, staff salaries, and expansion expenses. Strategic pricing and investment decisions are key to success.</p>
+                                <p>Balance income against maintenance costs and staff salaries. Make strategic pricing and investment decisions for success.</p>
                             </div>
                         </div>
                         <div class="feature-item">
@@ -116,7 +120,7 @@
                             </div>
                             <div class="feature-content">
                                 <h3>Staff Management</h3>
-                                <p>Hire and train staff members including ride operators, janitors, entertainers, and security. Assign them to optimal locations to maximize park efficiency and visitor satisfaction.</p>
+                                <p>Hire staff like operators, janitors and entertainers. Assign them strategically to maximize efficiency and satisfaction.</p>
                             </div>
                         </div>
                     </div>
@@ -129,17 +133,26 @@
                             <div class="contribution-category">
                                 <h3><i class="fas fa-pencil-ruler"></i> Design</h3>
                                 <ul>
-                                    <li>Core time management and tycoon mechanics</li>
-                                    <li>Balanced progression systems</li>
-                                    <li>Visitor AI behavior patterns</li>
+                                    <li>Core Loop</li>
+                                    <li>Economy</li>
+                                    <li>AI patterns</li>
+                                    <li>Progression unlock</li>
                                 </ul>
                             </div>
                             <div class="contribution-category">
                                 <h3><i class="fas fa-code"></i> Development</h3>
                                 <ul>
-                                    <li>Intuitive touch controls</li>
-                                    <li>Economic simulation model</li>
-                                    <li>Performance optimization</li>
+                                    <li>Coded customers (AI) using waypoints and path finding</li>
+                                    <li>Implemented VFX and other effects/Haptics</li>
+                                    <li>Improved on the existing character controller</li>
+                                </ul>
+                            </div>
+                            <div class="contribution-category">
+                                <h3><i class="fas fa-tasks"></i> Project Management</h3>
+                                <ul>
+                                    <li>Interacted with the publisher</li>
+                                    <li>Managed Expectations/Deadlines</li>
+                                    <li>Hired Developers and Artists to work on the project</li>
                                 </ul>
                             </div>
                         </div>
@@ -148,25 +161,23 @@
 
                 <div class="project-challenges">
                     <h2>Design Challenge</h2>
-                    <p>Creating an intuitive building system that worked well on small mobile screens presented significant UX challenges. Early playtests showed that players struggled with precise placement of attractions and often became frustrated when trying to build their dream parks on smaller devices.</p>
+                    <p>Early testing showed that 29% of players were leaving after unlocking the 2nd ride of the park, creating a significant retention problem in the critical early gameplay phase.</p>
                     
                     <h2>What I Changed</h2>
                     <ul>
-                        <li>Developed a smart grid-based placement system with visual guides</li>
-                        <li>Implemented a zoom and pan control scheme optimized for touch</li>
-                        <li>Created a multi-step undo/redo system to reduce frustration</li>
-                        <li>Added visual and haptic feedback for successful and invalid placements</li>
-                        <li>Designed a contextual tutorial that guides players through their first builds</li>
+                        <li>Improved the onboarding flow by properly guiding the user without making the user feel restricted</li>
+                        <li>Added points of interest for the user to go and do more actions</li>
+                        <li>Improved reward spacing on the user onboarding</li>
                     </ul>
                     
                     <h2>Outcome</h2>
-                    <p>The redesigned building system resulted in a <span class="stat-highlight">27% increase in session length</span> and a <span class="stat-highlight">35% reduction in tutorial dropout rates</span>. Playtest feedback specifically praised the intuitive controls. The changes also led to more creative park designs as players felt confident experimenting with complex layouts.</p>
+                    <p>The improved onboarding experience resulted in <span class="stat-highlight">improved retention D1 from 29% to 34%</span> and <span class="stat-highlight">improved churn on ride #2 by 23%</span>. These metrics demonstrated that the revised approach successfully addressed the critical early-game retention problem.</p>
                     
                     <h2>What I Learned</h2>
                     <div class="learning-items">
                         <div class="learning-item">
                             <i class="fas fa-lightbulb"></i>
-                            <p>Mobile UX design requires special consideration for touch input precision and screen size limitations</p>
+                            <p>The importance of having a rewarding and directed onboarding, but also giving the player the freedom to do his own choices</p>
                         </div>
                     </div>
                 </div>
