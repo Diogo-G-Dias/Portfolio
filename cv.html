@@ -461,10 +461,35 @@
                 top: 0;
                 width: 100%;
                 padding: 15px;
+                margin: 0;
             }
             
             header, footer, .cv-actions, .page-header, .portfolio-button-container {
                 display: none !important;
+            }
+            
+            /* Prevent text cutoffs between pages */
+            .cv-item {
+                page-break-inside: avoid;
+            }
+            
+            .cv-section {
+                page-break-before: auto;
+            }
+            
+            h2, h3 {
+                page-break-after: avoid;
+            }
+            
+            ul, ol {
+                page-break-before: avoid;
+            }
+            
+            /* Remove timestamps from footer */
+            @page {
+                margin: 0.5cm;
+                size: auto;
+                marks: none;
             }
         }
     </style>
@@ -476,13 +501,20 @@
             const originalTitle = document.title;
             document.title = "CV Diogo Dias";
             
+            // Remove timestamps before printing
+            document.querySelectorAll('.cv-item-date').forEach(function(element) {
+                element.dataset.originalContent = element.textContent;
+                // Keep the year range but remove any timestamps
+                element.textContent = element.textContent.replace(/\d{1,2}:\d{2}(\s*[AP]M)?/gi, '').trim();
+            });
+            
             // Try to set PDF as default (works in Chrome)
             if (navigator.userAgent.indexOf('Chrome') !== -1) {
                 // In Chrome, we can try to set the destination to PDF
                 const printSettings = {
                     destination: 'Save as PDF',
                     shouldPrintBackgrounds: true,
-                    margins: { top: 0, bottom: 0, left: 0, right: 0 }
+                    margins: { top: 0.5, bottom: 0.5, left: 0.5, right: 0.5 }
                 };
                 
                 try {
@@ -501,9 +533,14 @@
                 window.print();
             }
             
-            // Restore original title
+            // Restore original title and date content
             setTimeout(function() {
                 document.title = originalTitle;
+                document.querySelectorAll('.cv-item-date').forEach(function(element) {
+                    if (element.dataset.originalContent) {
+                        element.textContent = element.dataset.originalContent;
+                    }
+                });
             }, 100);
         }
     </script>
